@@ -1,4 +1,5 @@
 <?php
+//teste
 require_once('conexao.class.php');
 $conect = new Conectar();
 require_once('cruds.class.php');
