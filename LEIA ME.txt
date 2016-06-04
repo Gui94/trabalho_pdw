@@ -1,0 +1,52 @@
+1-Abra o postgres
+2-crie um banco chamado Noticias
+3-execute esses scripts para criar as tabelas no banco:
+
+create table portal(
+id_portal serial NOT NULL,
+nm_portal VARCHAR NOT NULL,
+site VARCHAR NOT NULL,
+email VARCHAR NOT NULL,
+PRIMARY KEY(id_portal)
+);
+
+
+create table noticia(
+id_noticia serial NOT NULL,
+id_portal INTEGER NOT NULL,
+titulo VARCHAR NOT NULL,
+data DATE NOT NULL,
+gravata VARCHAR NOT NULL,
+conteudo VARCHAR NOT NULL,
+link VARCHAR NOT NULL,
+PRIMARY KEY(id_noticia),
+FOREIGN KEY(id_portal) REFERENCES portal(id_portal)
+);
+
+create table imagem(
+id_imagem serial NOT NULL,
+id_noticia INTEGER NOT NULL,
+imagem VARCHAR NOT NULL,
+destaque BOOLEAN NOT NULL,
+PRIMARY KEY(id_imagem),
+FOREIGN KEY(id_noticia) REFERENCES noticia(id_noticia)
+);
+
+
+create table comentarios (
+id_comentario serial NOT NULL,
+id_noticia INTEGER NOT NULL,
+comentario VARCHAR NOT NULL,
+email VARCHAR NOT NULL,
+PRIMARY KEY(id_comentario),
+FOREIGN KEY(id_noticia) REFERENCES noticia(id_noticia)
+);
+
+
+
+
+
+4-dentro da pasta htdocs crie uma pasta chamada noticias e jogue todos o arquivos dentro
+5-dentro do arquivo conexao.class.php,altera a variavel host para o host que voce esta usando,
+coloque o usuario do seu banco de dados na variavel usuario,a senha do seu banco,e o nome do banco na variavel banco(Noticias)
+6-para acessar o sistema,cole este link no navegador: http://localhost/noticias/
