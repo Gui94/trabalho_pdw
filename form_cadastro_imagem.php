@@ -5,9 +5,6 @@
 require_once('conexao.class.php');
 //instancio uma nova conexão ao banco de dados
 $conect = new Conectar();
-require_once('cruds.class.php');
-//instancio um novo crud da tabela imagem
-$op = new Cruds('imagem');
 ?>
 
 <form action="requests_imagem.php?acao=cadastrar" method="post"><!--action que vai legar ao arquivo onde trata todos os requests 

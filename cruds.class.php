@@ -86,5 +86,20 @@ class Cruds
 		header('Location:listar_noticias.php');//após cadastrar,redireciona para a listagem das noticias
 	}
 
+	//função de deleção do comentario,passo por parametro o id do comentario onde ele vai ser pego por get na pagina de listagem de comentarios,após clicar no link de delete,apagara o registro
+	public function DeleteComentario($id_comentario){
+		$query = "DELETE FROM comentarios WHERE id_comentario = '$id_comentario'";//variavel onde vai receber os comandos que serão executados no banco
+		pg_query($query) or die ("nao deletou");//executo a query caso não ocorra nenhum erro
+		header('Location:listar_comentarios.php');//após deletar o registro,redireciona para a lista de comentarios
+	}
+
+		//função de update do comentario,pego por get o id do comentario para pegar especificamente um registro só,onde será redirecionado para um formulario para cadastrar as novas informações daquele registro
+	public function ComentarioUpdate($id_comentario,$id_noticia,$comentario,$email){//passo por parametro as variaveis que vão pegar as informações nos formularios
+		//variavel onde vai receber os comandos que serão executados no banco
+		$query = "UPDATE comentarios set comentario = '$comentario' , email = '$email',id_noticia = '$id_noticia' WHERE id_comentario = '$id_comentario'";
+		pg_query($query) or die("nao alterou");//executo a query caso não ocorra nenhum erro
+		header('Location:listar_comentarios.php');//após atualizar o registro,redireciona para a listagem das noticias
+	}
+
 
 }

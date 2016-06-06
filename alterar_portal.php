@@ -2,9 +2,6 @@
 require_once('conexao.class.php');
 //instancio uma nova conexão ao banco de dados
 $conect = new Conectar();
-require_once('cruds.class.php');
-//instancio um novo crud da tabela portal
-$op = new Cruds('portal');
 //pego o id por get
 $id_portal = $_GET['id_portal'];
 ?>

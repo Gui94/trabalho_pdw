@@ -2,8 +2,6 @@
 <?php
 require_once'conexao.class.php';
 $conect = new Conectar();//instancio uma nova conexão ao banco de dados
-require_once'cruds.class.php';
-$crud = new Cruds('portal');//instancio um novo crud da tabela noticia
 
 $sql = "SELECT * FROM portal";//variavel onde vai receber os comandos que serão executados no banco
 

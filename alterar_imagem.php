@@ -4,9 +4,6 @@
 require_once('conexao.class.php');
 //instancio uma nova conexão ao banco de dados
 $conect = new Conectar();
-require_once('cruds.class.php');
-//instancio um novo crud da tabela imagem
-$op = new Cruds('imagem');
 //pego o id por get
 $id_imagem = $_GET['id_imagem'];
 ?>

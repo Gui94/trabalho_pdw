@@ -3,8 +3,6 @@ require_once 'conexao.class.php';
 require_once 'cruds.class.php';
 //instancio uma nova conexão ao banco de dados
 $conect = new Conectar();
-//instancio um novo crud da tabela portal
-$op = new Cruds('portal');
 ?>
 
 

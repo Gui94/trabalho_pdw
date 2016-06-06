@@ -2,9 +2,6 @@
 require_once('conexao.class.php');
 //instancio uma nova conexão ao banco de dados
 $conect = new Conectar();
-require_once('cruds.class.php');
-//instancio um novo crud da tabela noticia
-$op = new Cruds('noticia');
 ?>
 <a href="listar_noticia.php">lista de noticias cadastradas</a>
 <br/>
