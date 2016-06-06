@@ -3,9 +3,6 @@
 require_once('conexao.class.php');
 //instancio uma nova conexão ao banco de dados
 $conect = new Conectar();
-require_once('cruds.class.php');
-//instancio um novo crud da tela noticia
-$op = new Cruds('noticia');
 $id_noticia = $_GET['id_noticia'];
 //pego o id por get
 $sql = "SELECT * FROM noticia";
