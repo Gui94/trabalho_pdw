@@ -36,7 +36,7 @@ while ($colunas = pg_fetch_assoc($query))://executo o comando pg_fetch_assoc par
 	<br/>
 <p><a href="comentarios.php?id_noticia=<?php echo $colunas['id_noticia'];?>">Postar um comentario</a></p><!--pego o id da noticia pelo link para postar o comentario -->
 <br/>
-<p><a href="leitura_comentario.php?id_noticia=<?php echo $colunas['id_noticia'];?>">comentarios desta noticia</a></p>
+<p><a href="leitura_comentario.php?id_noticia=<?php echo $colunas['id_noticia'];?>">comentarios desta noticia</a></p><!--pego o id da noticia pelo link para listar os comentarios relacionados a esta noticia -->
 </center>
 </div>
   <?php 
